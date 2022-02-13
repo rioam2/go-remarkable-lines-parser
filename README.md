@@ -12,16 +12,22 @@ go get -u github.com/rioam2/go-remarkable-lines-parser
 package main
 
 import (
-  "fmt"
-  goremarkablelinesparser "github.com/rioam2/go-remarkable-lines-parser"
+	"fmt"
+	"os"
+
+	goremarkablelinesparser "github.com/rioam2/go-remarkable-lines-parser"
 )
 
 func main() {
-  file := os.Open("./my-lines-file.rm")
-  page, err := goremarkablelinesparser.FromReader(file)
-  if err != nil {
-    panic(err)
-  }
-  fmt.Println(page)
+	file, err := os.Open("./my-lines-file.rm")
+	if err != nil {
+		panic(err)
+	}
+	page, err := goremarkablelinesparser.FromReader(file)
+	if err != nil {
+		panic(err)
+	}
+	fmt.Println(page)
 }
+
 ```
