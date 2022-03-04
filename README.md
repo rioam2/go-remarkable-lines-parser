@@ -1,6 +1,7 @@
 # go-remarkable-lines-parser
 
-Golang package to parse `.rm` lines files from the reMarkable Paper Tablet
+Golang package to parse `.rm` lines files from the reMarkable Paper Tablet.
+Currently only supports `.rm` version 5 files.
 
 ## Quick Start
 
